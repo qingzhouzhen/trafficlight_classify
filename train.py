@@ -3,7 +3,7 @@ from mxnet import gluon, init, nd
 from mxnet.gluon import data as gdata, loss as gloss, model_zoo
 import os
 
-def train_fine_tuning(net, learning_rate, batch_size=128, num_epochs=20):
+def train_fine_tuning(net, learning_rate, batch_size=128, num_epochs=40):
     train_iter = gdata.DataLoader(
         train_imgs.transform_first(train_augs), batch_size, shuffle=True)
     test_iter = gdata.DataLoader(

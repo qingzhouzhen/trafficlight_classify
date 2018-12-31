@@ -532,7 +532,7 @@ def to_onehot(X, size):
     return [nd.one_hot(x, size) for x in X.T]
 
 
-def train(train_iter, test_iter, net, loss, trainer, ctx, num_epochs):
+def train(train_iter, test_iter, net, loss, trainer, ctx, num_epochs, fname='./model/'):
     """Train and evaluate a model."""
     print('training on', ctx)
     if isinstance(ctx, mx.Context):
@@ -559,6 +559,8 @@ def train(train_iter, test_iter, net, loss, trainer, ctx, num_epochs):
               'time %.1f sec'
               % (epoch, train_l_sum / n, train_acc_sum / m, test_acc,
                  time.time() - start))
+        model_name = os.path.join(fname, 'trafficlight-epoch-'+str(epoch)+str(test_acc)+'.params')
+        net.save_parameters(model_name)
 
 
 def train_2d(trainer):
