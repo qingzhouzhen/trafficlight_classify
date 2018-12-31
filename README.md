@@ -21,3 +21,8 @@ epoch 6, loss 0.8685, train acc 0.711, test acc 0.884, time 126.5 sec
 http://zh.gluon.ai/chapter_computer-vision/fine-tuning.html?highlight=hotdog
 
 https://gluon-cv.mxnet.io/build/examples_classification/demo_cifar10.html
+
+##### 预模型模型
+
+链接:https://pan.baidu.com/s/1Pp5Vf5oBiWzsjP08Op36LQ  密码:8br1
+
